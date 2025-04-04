@@ -20,14 +20,17 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fnCall(cl, "What is the weather like in Bukit Timah, Singapore?")
-	fnCall(cl, "What is the weather like in Shewsberry, K2XPWD Glandon?")
-	fnCall(cl, "What is the weather today?")
+	askAI(cl, "What is the weather like in Bukit Timah, Singapore?")
+	askAI(cl, "What is the weather like in Shewsberry, K2XPWD Glandon?")
+	askAI(cl, "What is the weather today?")
 }
 
 var (
-	tools = []*genai.Tool{
-		{FunctionDeclarations: []*genai.FunctionDeclaration{&weatherFuncDecl,&weatherPostcodeFuncDecl}},
+	tools = []*genai.Tool{{
+		FunctionDeclarations: []*genai.FunctionDeclaration{
+			&weatherFuncDecl,
+			&weatherPostcodeFuncDecl,
+		}},
 	}
 
 	weatherFuncDecl = genai.FunctionDeclaration{
@@ -55,8 +58,8 @@ var (
 	}
 )
 
-func fnCall(cl *genai.Client, prompt string) {
-	fmt.Printf("Prompt: %s\n",prompt)
+func askAI(cl *genai.Client, prompt string) {
+	fmt.Printf("Prompt: %s\n", prompt)
 
 	ctx := context.Background()
 	cfg := &genai.GenerateContentConfig{
@@ -67,6 +70,10 @@ func fnCall(cl *genai.Client, prompt string) {
 		log.Fatal(err)
 	}
 
+	callFn(res)
+}
+
+func callFn(res *genai.GenerateContentResponse){
 	for _, part := range res.Candidates[0].Content.Parts {
 		if part.FunctionCall == nil {
 			fmt.Printf("Text Response: %s\n", part.Text)
