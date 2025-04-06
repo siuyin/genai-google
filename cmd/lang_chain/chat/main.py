@@ -7,7 +7,8 @@ from langchain_core.messages import HumanMessage, SystemMessage
 
 
 def prompt(model, prompt: str) -> str:
-    r = model.invoke([HumanMessage(prompt)])
+    # r = model.invoke([HumanMessage(prompt)])
+    r = model.invoke(prompt)
     return r.content
 
 
