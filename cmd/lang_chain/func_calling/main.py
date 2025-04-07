@@ -9,27 +9,27 @@ print("GOOGLE_API_KEY=****")
 
 
 def main():
-    # print(prompt(llm, "Weather : Bukit Timah, Singapore"))
-    print(prompt(llm, "Weather : Gambu town, Gerterbbabbang"))
+    print(prompt(llm, "Weather : Bukit Timah, Singapore"))
+    # print(prompt(llm, "Weather : Gambu town, Gerterbbabbang"))
     # print(prompt(llm, "Weather forecast for Shewsberry GW5XP2, Glandon"))
 
 
 from langchain_core.messages import HumanMessage, SystemMessage, ToolMessage
 
-# messages = [SystemMessage(content="Keep your responses brief and to the point.")]
-messages = [
-    SystemMessage(
-        content="""You are an entertainment AI that
-tells interesting stories based on the weather.
-You MUST start by providing the weather forecast by calling the appropriate tool(s) 
-Then add some background on the place.
-If you do not know, make up some fictional content.
-then weave a story around the current weather.
-Include a male protagonist and a female love interest
-End with a disclaimer that your content is completely fictional purely for entertainment
-"""
-    )
-]
+messages = [SystemMessage(content="Keep your responses brief and to the point.")]
+# messages = [
+#     SystemMessage(
+#         content="""You are an entertainment AI that
+# tells interesting stories based on the weather.
+# You MUST start by providing the weather forecast by calling the appropriate tool(s) 
+# Then add some background on the place.
+# If you do not know, make up some fictional content.
+# then weave a story around the current weather.
+# Include a male protagonist and a female love interest
+# End with a disclaimer that your content is completely fictional purely for entertainment
+# """
+#     )
+# ]
 
 
 def prompt(model, prompt: str) -> any:
