@@ -1,0 +1,7 @@
+id,name,father,mother,husband,wife,friend,son,daughter
+_fred,frederick joseph flintstone,,,,_wilma,"_barney,_wilma",,_pebbles
+_barney,bernard mathew rubble,,,,_betty,"_fred,_betty",_bambam,
+_wilma,wilma anna flintstone (nee slaghoople),,,_fred,,,,_pebbles
+_betty,elizabeth jean rubble (nee mcbricker),,,_barney,,,_bambam,
+_bambam,bamm bamm,_barney,_betty,,,_pebbles,,
+_pebbles,pebbles,_fred,_wilma,,,_bambam,,

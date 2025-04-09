@@ -4,6 +4,7 @@ beautifulsoup4==4.13.3
 cachetools==5.5.2
 certifi==2025.1.31
 charset-normalizer==3.4.1
+cogdb==3.0.7
 docstring-parser==0.16
 filetype==1.2.0
 google==3.0.0
@@ -41,6 +42,7 @@ langgraph-prebuilt==0.1.8
 langgraph-sdk==0.1.61
 langsmith==0.3.24
 numpy==2.2.4
+ollama==0.4.7
 orjson==3.10.16
 ormsgpack==1.9.1
 packaging==24.2
@@ -66,5 +68,5 @@ typing-inspection==0.4.0
 urllib3==2.3.0
 validators==0.34.0
 websockets==15.0.1
-xxhash==3.5.0
+xxhash==3.2.0
 zstandard==0.23.0

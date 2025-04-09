@@ -1,0 +1,28 @@
+_fred wife _wilma .
+_barney wife _betty .
+_wilma husband _fred .
+_betty husband _barney .
+_bambam father _barney .
+_bambam mother _wilma .
+_pebbles father _fred .
+_pebbles mother _wilma .
+_barney name "bernard mathew rubble" .
+_wilma name "wilma anna flintstone (nee slaghoople)" .
+_betty name "elizabeth jean rubble (nee mcbricker)" .
+_fred name "frederick joseph flintstone" .
+_fred friend _barney .
+_fred friend _betty .
+_barney friend _fred .
+_barney friend _wilma.
+_pebbles friend _bambam .
+_bambam friend _pebbles .
+_fred daughter _pebbles .
+_wilma daughter _pebbles .
+_betty son _bambam .
+_barney son _bambam .
+_picnic1 location bedrock .
+_picnic1 food "tuna sandwiches, turkey, ham, cranberry juice" .
+_picnic1 event_duration "[t1, t2)"
+_fred was_at _picnic1 .
+_wilma was_at _picnic1 .
+_pebbles was_at _picnic1 .
